@@ -1,0 +1,65 @@
+:root{
+	--size: 100px;
+	--width: 200px;
+	--height: 300px;
+	--radius: 50px;
+	--red: #f24e1e;
+	--orange:#ff7262;
+	--purple: #a259ff;
+  --blue: #1abcfe;
+	--green: #0acf83;
+}
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.red{
+	height: var(--size);
+	width: var(--size);
+	background-color: var(--red);
+	border-top-left-radius: var(--radius);
+	border-bottom-left-radius: var(--radius);
+}
+
+.orange{
+	height: var(--size);
+	width: var(--size);
+	border-top-right-radius: var(--radius);
+	border-bottom-right-radius: var(--radius);
+	background-color: var(--orange);
+}
+
+.purple{
+	height: var(--size);
+	width: var(--size);
+	border-top-left-radius: var(--radius);
+	border-bottom-left-radius: var(--radius);
+	background-color: var(--purple);
+}
+
+.blue{
+	height: var(--size);
+	width: var(--size);
+	border-radius: var(--radius);
+	background-color: var(--blue);
+}
+
+.green{
+	height: var(--size);
+	width: var(--size);
+	border-top-left-radius: var(--radius);
+	border-bottom-left-radius: var(--radius);
+	border-bottom-right-radius: var(--radius);
+	background-color: var(--green);
+}
+
+#beta-figma{
+	width: var(--width);
+	height: var(--height);
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+
+}
