@@ -1,0 +1,12 @@
+{
+  "name": "beta-server",
+  "version": "1",
+  "description": "Vanilla Server",
+  "main": "index.js",
+  "scripts": {
+    "serve": "bun app.js"
+  },
+  "keywords": ["Vanilla Server"],
+  "author": "Sunny Béta",
+  "license": "MIT"
+}

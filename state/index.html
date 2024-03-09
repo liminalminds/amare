@@ -1,13 +1,18 @@
 <!doctype html>
 <html>
 	<head>
-		<title>Figma Logo</title>
-		<script src="script.js"></script>
+		<title>State Management | Liminal Minds</title>
 	</head>
 	<body>
-		<div id="beta-ui-state-management">
+		<div>
 			<div id="state">0</div>
 			<button onClick="onClick()">Click Me</button>
 		</div>
 	</body>
+	<script>
+		const onClick = () => {
+			const state = document.getElementById("state");
+			state.innerText = parseInt(state.innerText)+1;
+		}
+	</script>
 </html>

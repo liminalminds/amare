@@ -1,6 +1,5 @@
-# Beta UI
+# UI
 
-*Custom UI code in HTML, CSS & Vanilla JS*
+*Custom UI Code Snippets in HTML, CSS & Vanilla JS*
 
 :)
-

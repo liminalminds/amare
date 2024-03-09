@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<title>Timer | Liminal Minds</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"
+		<meta name="author" content="Sunny Béta">
+		<meta name="description" content="Vanilla Timer">
+	</head>
+	<body>
+		<span style="display: flex; align-items: center">
+			<div id="hh">00</div>
+			<div class="separator">:</div>
+			<div id="mm">00</div>
+			<div class="separator">:</div>
+			<div id="ss">00</div>
+			<div id="ms" style="font-size: 10px";>00</div>
+		</span>
+		<section id="options">
+			<button onclick="onStart()">Start</button>
+			<button onclick="onPause()">Pause</button>
+			<button onclick="onReset()">Reset</button>
+		</section>
+	</body>
+	<script>
+		const hours        = document.getElementById('hh')
+		const minutes      = document.getElementById('mm')
+		const seconds      = document.getElementById('ss')
+		const milliseconds = document.getElementById('ms')
+
+		let interval = null;
+		let time = 0;
+
+		function onReset() {
+			clearInterval(interval)
+			time = 0;
+			hours.innerText        = "00"
+			minutes.innerText      = "00"
+			seconds.innerText      = "00"
+			milliseconds.innerText = "00"
+		}
+
+		function onStart() {
+			if (interval == null) {
+				interval = setInterval(() => {
+					time = time + 1
+					hours.innerText        = parseInt( time / 360000)     .toString().padStart(2,"0")
+					minutes.innerText      = parseInt((time / 600) % 600) .toString().padStart(2,"0")
+					seconds.innerText      = parseInt((time / 100) % 600) .toString().padStart(2,"0")
+					milliseconds.innerText = parseInt( time % 100)        .toString().padStart(2,"0")
+				}, 10)
+			}
+		}
+
+		function onPause() {
+			console.log("Pause")
+			clearInterval(interval)
+			interval = null
+		}
+	</script>
+</html>

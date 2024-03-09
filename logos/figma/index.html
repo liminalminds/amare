@@ -1,11 +1,10 @@
 <!doctype html>
 <html>
 	<head>
-		<title>Figma Logo</title>
-		<link rel="stylesheet" href="style.css">
+		<title>Figma Logo | Liminal Minds</title>
 	</head>
 	<body>
-		<div id="beta-ui-figma">
+		<div id="figma">
 			<div class="figma-red"></div>
 			<div class="figma-orange"></div>
 			<div class="figma-purple"></div>
@@ -13,4 +12,70 @@
 			<div class="figma-green"></div>
 		</div>
 	</body>
+	<style>
+		:root{
+			--figma-size: 100px;
+			--figma-width: 200px;
+			--figma-height: 300px;
+			--figma-radius: 50px;
+			--figma-red: #f24e1e;
+			--figma-orange:#ff7262;
+			--figma-purple: #a259ff;
+			--figma-blue: #1abcfe;
+			--figma-green: #0acf83;
+		}
+
+		*{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+
+		.figma-red{
+			height: var(--figma-size);
+			width: var(--figma-size);
+			background-color: var(--figma-red);
+			border-top-left-radius: var(--figma-radius);
+			border-bottom-left-radius: var(--figma-radius);
+		}
+
+		.figma-orange{
+			height: var(--figma-size);
+			width: var(--figma-size);
+			border-top-right-radius: var(--figma-radius);
+			border-bottom-right-radius: var(--figma-radius);
+			background-color: var(--figma-orange);
+		}
+
+		.figma-purple{
+			height: var(--figma-size);
+			width: var(--figma-size);
+			border-top-left-radius: var(--figma-radius);
+			border-bottom-left-radius: var(--figma-radius);
+			background-color: var(--figma-purple);
+		}
+
+		.figma-blue{
+			height: var(--figma-size);
+			width: var(--figma-size);
+			border-radius: var(--figma-radius);
+			background-color: var(--figma-blue);
+		}
+
+		.figma-green{
+			height: var(--figma-size);
+			width: var(--figma-size);
+			border-top-left-radius: var(--figma-radius);
+			border-bottom-left-radius: var(--figma-radius);
+			border-bottom-right-radius: var(--figma-radius);
+			background-color: var(--figma-green);
+		}
+
+		#figma{
+			width: var(--figma-width);
+			height: var(--figma-height);
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+		}
+	</style>
 </html>
